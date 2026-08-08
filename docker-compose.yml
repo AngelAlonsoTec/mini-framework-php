@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  web:
+    build: .
+    ports:
+      - "8080:80"
+    volumes:
+      - ./src:/var/www/html
+    command: >
+      bash -c "chown -R www-data:www-data /var/www/html && apache2-foreground"
+# Solo una vez:
+# docker-compose up -d --build 
+# Despues:
+# docker-compose up -d
+# (El parámetro -d hace que corra en 
+# segundo plano, liberando tu terminal).
