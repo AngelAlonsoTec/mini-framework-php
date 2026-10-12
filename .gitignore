@@ -1,0 +1,28 @@
+# Dependencias
+/vendor/
+/node_modules/
+
+# Entorno (nunca subir credenciales reales)
+.env
+.env.*
+!.env.example
+
+# Build de assets (cuando se sustituya el CDN de Tailwind)
+/src/public/build/
+/src/public/css/app.css
+
+# Logs y cache
+*.log
+/storage/
+/cache/
+
+# Editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
